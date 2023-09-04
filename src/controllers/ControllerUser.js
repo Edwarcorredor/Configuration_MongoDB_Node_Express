@@ -2,7 +2,7 @@ import ModelUser from "../models/ModelUser.js";
 import {userShema} from "../dto/modelDTO.js";
 import funMapping from "../dto/transformDTO.js";
 import  login from "../helpers/authen.js";
-
+import { crearToken } from "../config/jwt.js";
 class ControllerUser {
 
   static async loginUser(req, res, next) {
