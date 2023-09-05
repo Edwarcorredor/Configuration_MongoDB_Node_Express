@@ -1,10 +1,10 @@
 import { SignJWT, jwtVerify } from "jose"
-import { ObjectId } from "mongodb";
+
 import dotenv from 'dotenv';
-import conexion from "./atlas.js";
+
 dotenv.config();
 
-const conexionDB = await conexion();
+
 
 const crearToken = async (user) => {
     const encoder = new TextEncoder();

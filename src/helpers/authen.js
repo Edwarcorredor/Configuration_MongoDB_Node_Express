@@ -1,7 +1,7 @@
 import bcrypt from "bcrypt";
 import ModelAuthen from "../models/ModelAuthen.js";
 
-const login = async ({email, password}) => {
+const login = async ({email, password}, collection) => {
     try {
         if (!email || !password)
             throw { status: 400, message: "Faltan datos" };
