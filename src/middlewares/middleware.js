@@ -45,5 +45,5 @@ middlewareTablas.use(async(req,res,next)=>{
         res.status(err.status).json(err)
     }
 })
-
+//   npx tsc --init
 export {middlewareTablas}
