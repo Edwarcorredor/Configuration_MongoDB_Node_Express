@@ -12,6 +12,15 @@ export class Empresas{
     @Expose({name: "NAME"})
     @Transform(({value}) => {
         let data = /^(?=.*[a-zA-Z])[a-zA-Z0-9 ]+$/g.test(value);
+        validator: {
+            $jsonSchema: {
+              bsonType: "object",
+              required: [],
+              properties: {
+                username: {
+                  bsonType: "string",
+                  description: "Nombre de usuario",
+                },
         if ( data && typeof value == "string"){ 
             return String(value);
         } 
